@@ -1,6 +1,6 @@
-# News Rewriting Agent
+# News Rewriting Agent MVP
 
-基于 LangGraph 的热点改写项目，用于把热点信息转换成口播文案。
+基于 LangGraph 的热点改写项目最小实现，用于把热点信息转换成口播文案。
 
 ## 输入模式
 
