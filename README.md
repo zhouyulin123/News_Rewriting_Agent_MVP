@@ -11,13 +11,13 @@
 
 图中的业务节点名，已和 `services` 文件名一一对应：
 
-- `fetcher` -> `services/fetcher.py`
-- `extractor` -> `services/extractor.py`
-- `cleaner` -> `services/cleaner.py`
-- `classifier` -> `services/classifier.py`
-- `rewriter` -> `services/rewriter.py`
-- `qa` -> `services/qa.py`
-- `exporter` -> `services/exporter.py`
+- `提取HTML` -> `services/fetcher.py`
+- `摘取HTML内容` -> `services/extractor.py`
+- `内容清洗` -> `services/cleaner.py`
+- `内容分类` -> `services/classifier.py`
+- `重写新闻内容` -> `services/rewriter.py`
+- `内容检验` -> `services/qa.py`
+- `输出内容` -> `services/exporter.py`
 
 说明：`route_input` 和 `prepare_text` 是编排控制节点，在 `agent.py` 内实现，不属于 services 文件。
 
