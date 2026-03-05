@@ -24,7 +24,7 @@ class Article:
 class TopicResult:
     """主题分类结果。"""
 
-    label: str = "社会"
+    label: str = ""
     confidence: float = 0.0
     tags: list[str] = field(default_factory=list)
 
