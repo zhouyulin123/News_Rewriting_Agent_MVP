@@ -59,13 +59,6 @@ async def invoke_text(llm, system_prompt: str, user_prompt: str) -> str:
         return "".join(str(part) for part in content)
     return str(content).strip()
 
-
-async def invoke_json(llm, system_prompt: str, user_prompt: str) -> tuple[dict[str, Any], str]:
-    """调用 LLM 并将结果解析成 JSON，返回 (parsed, raw_text)。"""
-    text = await invoke_text(llm, system_prompt, user_prompt)
-    return parse_json_response(text), text
-
-
 def parse_json_response(text: str) -> dict[str, Any]:
     """尽量稳健地从模型输出中解析 JSON。
 
@@ -86,3 +79,12 @@ def parse_json_response(text: str) -> dict[str, Any]:
         if start != -1 and end != -1 and end > start:
             return json.loads(candidate[start : end + 1])
         raise
+
+
+async def invoke_json(llm, system_prompt: str, user_prompt: str) -> tuple[dict[str, Any], str]:
+    """调用 LLM 并将结果解析成 JSON，返回 (parsed, raw_text)。"""
+    text = await invoke_text(llm, system_prompt, user_prompt)
+    return parse_json_response(text), text
+
+
+
