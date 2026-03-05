@@ -3,8 +3,8 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from pathlib import Path
 import os
-os.environ["OPENAI_API_KEY"] = "sk-sknxgxqizokdnmdyketotkyrccisnmvagmndvbmtkwjwugfx"              # 不要硬编码到仓库
-os.environ["OPENAI_BASE_URL"] = "https://api.siliconflow.cn/v1"
+os.environ["OPENAI_API_KEY"] = ""
+os.environ["OPENAI_BASE_URL"] = ""
 
 @dataclass
 class FetchConfig:
@@ -46,8 +46,8 @@ class CleanConfig:
 @dataclass
 class LLMConfig:
     enabled: bool = True
-    model: str = "deepseek-ai/DeepSeek-V3.2"
-    base_url: str = "https://api.siliconflow.cn/v1"
+    model: str = ""
+    base_url: str = ""
     api_key_env: str = "OPENAI_API_KEY"
     base_url_env: str = "OPENAI_BASE_URL"
     temperature: float = 0.4
