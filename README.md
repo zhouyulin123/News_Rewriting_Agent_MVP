@@ -42,7 +42,6 @@ START
 News_Rewriting_Agent/
 ├─ main.py
 ├─ requirements.txt
-├─ plan.md
 └─ news_agent/
    ├─ agent.py
    ├─ config.py
